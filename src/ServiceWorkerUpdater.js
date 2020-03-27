@@ -3,10 +3,7 @@ const DEFAULT_CHECK_INTERVAL = 60 * 60 * 1000 // 1 hour
 export default class ServiceWorkerUpdater {
   updateInterval = null
 
-  constructor(
-    setUpdateHandler,
-    { checkInterval = DEFAULT_CHECK_INTERVAL, updateOnLoad = false }
-  ) {
+  constructor(setUpdateHandler, { checkInterval = DEFAULT_CHECK_INTERVAL, updateOnLoad = true }) {
     this.setUpdateHandler = setUpdateHandler
     this.checkInterval = checkInterval
     this.updateOnLoad = updateOnLoad
@@ -89,8 +86,6 @@ export default class ServiceWorkerUpdater {
 
 function isServer() {
   return (
-    typeof window === "undefined" ||
-    typeof navigator === "undefined" ||
-    !navigator.serviceWorker
+    typeof window === "undefined" || typeof navigator === "undefined" || !navigator.serviceWorker
   )
 }
