@@ -1,6 +1,6 @@
 # Service Worker Updater - React Hook & HOC
 
-![npm](https://img.shields.io/npm/v/service-worker-updater) ![npm](https://img.shields.io/npm/dm/service-worker-updater)
+![npm](https://img.shields.io/npm/v/service-worker-updater) ![npm bundle size](https://img.shields.io/bundlephobia/min/service-worker-updater) ![npm](https://img.shields.io/npm/dm/service-worker-updater) ![NPM](https://img.shields.io/npm/l/service-worker-updater)
 
 This package provides React hook and HOC to check for service worker updates.
 
