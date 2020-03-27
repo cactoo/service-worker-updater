@@ -1,4 +1,4 @@
-var _jsxFileName = "C:\\WORK\\service-worker-updater3\\src\\withSWUpdateChecker.js";
+var _jsxFileName = "C:\\WORK\\service-worker-updater\\src\\withSWUpdateChecker.js";
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -18,17 +18,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 import React, { Component } from "react";
 import ServiceWorkerUpdater from "./ServiceWorkerUpdater";
-export default function withSWUpdateChecker(WrappedComponent, _ref) {
-  var _temp;
+export default function withSWUpdateChecker(WrappedComponent, _temp) {
+  var _temp2;
 
-  var checkInterval = _ref.checkInterval,
+  var _ref = _temp === void 0 ? {} : _temp,
+      checkInterval = _ref.checkInterval,
       updateOnLoad = _ref.updateOnLoad;
-  return _temp = /*#__PURE__*/function (_Component) {
-    _inheritsLoose(_temp, _Component);
 
-    var _super = _createSuper(_temp);
+  return _temp2 = /*#__PURE__*/function (_Component) {
+    _inheritsLoose(_temp2, _Component);
 
-    function _temp() {
+    var _super = _createSuper(_temp2);
+
+    function _temp2() {
       var _this;
 
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -51,7 +53,7 @@ export default function withSWUpdateChecker(WrappedComponent, _ref) {
       return _this;
     }
 
-    var _proto = _temp.prototype;
+    var _proto = _temp2.prototype;
 
     _proto.componentDidMount = function componentDidMount() {
       var updater = new ServiceWorkerUpdater(this.setUpdateHandler, {
@@ -83,6 +85,6 @@ export default function withSWUpdateChecker(WrappedComponent, _ref) {
       }));
     };
 
-    return _temp;
-  }(Component), _temp;
+    return _temp2;
+  }(Component), _temp2;
 }

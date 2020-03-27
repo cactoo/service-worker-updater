@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ServiceWorkerUpdater from "./ServiceWorkerUpdater";
 
-var useSWUpdateChecker = function useSWUpdateChecker(_ref) {
-  var checkInterval = _ref.checkInterval,
+var useSWUpdateChecker = function useSWUpdateChecker(_temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      checkInterval = _ref.checkInterval,
       updateOnLoad = _ref.updateOnLoad;
 
   var _useState = useState(null),
