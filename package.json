@@ -1,0 +1,43 @@
+{
+  "name": "service-worker-updater",
+  "version": "0.0.3-2",
+  "description": "This package provides React hook and HOC to check for service worker updates",
+  "author": "Jakub Ziebikiewicz <contact@cactoo.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cactoo/service-worker-updater.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cactoo/service-worker-updater/issues"
+  },
+  "keywords": [
+    "service worker",
+    "sw",
+    "react",
+    "gatsby-offline"
+  ],
+  "files": [
+    "es",
+    "lib",
+    "umd"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "@babel/runtime": "^7.9.2"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nwb": "0.24.x",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
