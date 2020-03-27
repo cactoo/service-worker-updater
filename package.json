@@ -1,6 +1,6 @@
 {
   "name": "service-worker-updater",
-  "version": "0.0.3-2",
+  "version": "0.0.3",
   "description": "This package provides React hook and HOC to check for service worker updates",
   "author": "Jakub Ziebikiewicz <contact@cactoo.dev>",
   "license": "MIT",
