@@ -120,3 +120,10 @@ There are only two options:
 ## How to use it in Gatsby.js?
 
 WIP
+
+## Resources
+
+I definitely recommend reading more about Service Workers lifecycles and their possible states:
+
+- [https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
+- [https://bitsofco.de/what-self-skipwaiting-does-to-the-service-worker-lifecycle/](https://bitsofco.de/what-self-skipwaiting-does-to-the-service-worker-lifecycle/)
