@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react"
 import ServiceWorkerUpdater from "./ServiceWorkerUpdater"
 
-const useSWUpdateChecker = ({ checkInterval, updateOnLoad }) => {
+const useSWUpdateChecker = ({ checkInterval, updateOnLoad } = {}) => {
   const [updateHandler, setUpdateHandler] = useState(null)
 
   useEffect(() => {
-    const setHandler = (handler) => {
+    const setHandler = handler => {
       setUpdateHandler(() => handler)
     }
     const updater = new ServiceWorkerUpdater(setHandler, {
-      checkInterval: checkInterval,
+      checkInterval: checkInterval
     })
 
     return () => updater.doCleanup()

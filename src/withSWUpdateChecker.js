@@ -3,21 +3,21 @@ import ServiceWorkerUpdater from "./ServiceWorkerUpdater"
 
 export default function withSWUpdateChecker(
   WrappedComponent,
-  { checkInterval, updateOnLoad }
+  { checkInterval, updateOnLoad } = {}
 ) {
   return class extends Component {
     state = {
       updateHandler: null,
-      updater: null,
+      updater: null
     }
 
     componentDidMount() {
       const updater = new ServiceWorkerUpdater(this.setUpdateHandler, {
         checkInterval,
-        updateOnLoad,
+        updateOnLoad
       })
       this.setState({
-        updater,
+        updater
       })
     }
 
@@ -25,9 +25,9 @@ export default function withSWUpdateChecker(
       this.state.updater.doCleanup()
     }
 
-    setUpdateHandler = (handler) => {
+    setUpdateHandler = handler => {
       this.setState({
-        updateHandler: handler,
+        updateHandler: handler
       })
     }
 
@@ -36,11 +36,7 @@ export default function withSWUpdateChecker(
       const hasUpdate = typeof updateHandler === "function"
 
       return (
-        <WrappedComponent
-          hasUpdate={hasUpdate}
-          updateHandler={updateHandler}
-          {...this.props}
-        />
+        <WrappedComponent hasUpdate={hasUpdate} updateHandler={updateHandler} {...this.props} />
       )
     }
   }
